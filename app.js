@@ -15,7 +15,12 @@ app.get('/', function (req, res) {
   res.send('Hello World - from my new Geog 576 node.js express app!');
 });
 
-
+// About Route
+app.get('/about', function (req, res) {
+  console.log("The /about route has been hit ...")
+  res.status(200)
+  res.send('About Page');
+});
 
 // App listens on Port 8000 for requests
 app.listen(8000, function (err) {
